@@ -1,10 +1,15 @@
 import {app} from "./app.js";
-import { createUser, deleteUser, getUsers, testAPI } from "./modules/users/users.controller.js";
+import { connectDB } from "./config/mongodb.js";
 
 const port = 3000;
 
+try{
 
-
-app.listen(port, () => {
+    await connectDB()    
+    app.listen(port, () => {
     console.log(`server running on port: ${port}`);
 });
+}    catch(error) {
+        console.error("startup failed",error);
+        process.exit(1);
+    }
