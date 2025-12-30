@@ -16,6 +16,9 @@ app.use(cors(corsOptions));
 
 app.use(express.json())
 
+app.get("/",(req,res)=>{
+    res.send("Hello World")
+})
 app.use("/api", apiRoutes)
 
 //catch404
