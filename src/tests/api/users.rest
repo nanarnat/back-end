@@ -38,6 +38,6 @@ POST http://localhost:3000/api/v2/users/auth/ai/ask
 Content-Type: application/json
 
 {
-    "question": "who are admin?",
+    "question": "who are user?",
     "topK": 5
 }
